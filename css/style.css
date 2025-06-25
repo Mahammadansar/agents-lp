@@ -12834,7 +12834,7 @@ img {
 .half-fluid .image {
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 125%;
   height: 100%;
 }
 
