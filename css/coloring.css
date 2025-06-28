@@ -96,7 +96,7 @@ h1.s2 .c1 span,
 .owl-dot.active,
 body::-webkit-scrollbar-thumb,#de_modal::-webkit-scrollbar-thumb
  {
-    background:var(--primary-color);
+    background:#494846;
 }
 ::-moz-selection { /* Code for Firefox */
     color:#ffffff;
@@ -186,7 +186,7 @@ a.bc-btn,
 .topbar-widget a span,
 .de-icon,
 a#cookit-link {
-    color: var(--primary-color);
+    color: #494846; 
 }
 
 

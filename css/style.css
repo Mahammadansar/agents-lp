@@ -124,8 +124,8 @@ Table of content:
   --bg-color-even: #E8E8E8;
   --bg-color-odd: #F4F4F4;
   --bg-light: #F8F9FA;
-  --bg-dark-1: #103C3B;
-  --bg-dark-2: #1E4645;
+  --bg-dark-1: #112131;
+  --bg-dark-2: #112131;
   --bg-dark-3: #1e1e1e;  
   --bg-dark-1-rgb: 16, 60, 59;
   --bg-grey: #eeeeee;
@@ -1331,7 +1331,7 @@ section.no-bg,
 footer {
   color: var(--body-font-color-dark);
   background: var(--bg-dark-1);
-  padding: 100px 0 0 0;
+  /* padding: 100px 0 0 0; */
 }
 
 footer.footer-light {
@@ -1367,7 +1367,7 @@ footer a {
 }
 
 .subfooter {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   border-top: solid 1px rgba(255, 255, 255, .1);
   padding: 20px 0 20px 0;
 }
@@ -3143,7 +3143,7 @@ a.btn-main:visited,
 input[type=button].btn-main,
 a.btn-line,
 #mainmenu li ul.mega a.btn-main {
-  background: var(--primary-color);
+  background: #494846;;
   color: var(--btn-color);
   font-family: var(--btn-font-family);
   font-size: var(--btn-font-size);
@@ -12856,3 +12856,7 @@ img {
     width: auto;
   }
 }
+
+/* .fa-solid {
+  color: #112131;
+} */
