@@ -616,12 +616,11 @@
             <span class="close" id="whatsappClose">&times;</span>
             <!-- ICON -->
             <div class="icon-wrapper">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/17619/17619595.png" alt="whatsapp icon">
             </div>
             <div class="whatsapp-header">Get a Faster Response</div>
             <form id="whatsappForm" method="post" action="https://www.indus-inhouse.com/lead-api-v3">
                 <input value="6834119c52b0d" name="campaign" type="hidden">
-                <input value="" name="agents_inc" type="hidden">
                 <input value="lp" name="source" type="hidden">
                 <input value="https://dxbmaritimecity.com/thank-you.html" name="return_url" type="hidden">
                 <input type="hidden" name="agent" id="whatsappAgentName">
@@ -649,7 +648,7 @@
                     <label>Enter your whatsApp number</label>
                     <input type="tel" id="phoneNumber" name="phone" placeholder="e.g. 971501234567" required>
                 </div>
-                <button class="whatsapp-submit" type="submit" name="submit">WhatsApp Us</button>
+                <button class="whatsapp-submit" type="submit" name="submit">Submit</button>
             </form>
         </div>
     </div>
@@ -840,10 +839,6 @@
                 e.preventDefault();
                 return;
             }
-            // Open WhatsApp to selected agent
-            const agentNumber = selectedAgentPhone || '+971585708097'; // fallback to company if not set
-            const message = encodeURIComponent(`My name is ${userName} and I am interested in ${lead_type} ${purpose} properties. Contact me at ${phone}. Please connect me with ${selectedAgent}.`);
-            window.open(`https://wa.me/${agentNumber}?text=${message}`, '_blank');
         };
     </script>
 
