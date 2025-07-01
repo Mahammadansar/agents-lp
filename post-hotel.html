@@ -69,7 +69,7 @@
                                                                         <div
                                                                             class="relative hover text-center overflow-hidden soft-shadow">
                                                                             <a class="p-0" href="Gianfranco.html">
-                                                                                <img src="images/demo/homepage-1.webp"
+                                                                                <img src="propic/ferre.png"
                                                                                     class="w-100 relative hover-scale-1-1"
                                                                                     alt="">
                                                                             </a>
@@ -83,7 +83,7 @@
                                                                             class="relative hover text-center overflow-hidden soft-shadow">
                                                                             <a class="p-0"
                                                                                 href="trussardi.html">
-                                                                                <img src="images/demo/homepage-2.webp"
+                                                                                <img src="propic/trussardi.png"
                                                                                     class="w-100 relative hover-scale-1-1"
                                                                                     alt="">
                                                                             </a>
@@ -97,7 +97,7 @@
                                                                             class="relative hover text-center overflow-hidden soft-shadow">
                                                                             <a class="p-0"
                                                                                 href="trussardi-phase2.html">
-                                                                                <img src="images/demo/homepage-3.webp"
+                                                                                <img src="propic/trussardi2.png"
                                                                                     class="w-100 relative hover-scale-1-1"
                                                                                     alt="">
                                                                             </a>
@@ -111,7 +111,7 @@
                                                                             class="relative hover text-center overflow-hidden soft-shadow">
                                                                             <a class="p-0"
                                                                                 href="post-hotel.html">
-                                                                                <img src="images/demo/homepage-4.webp"
+                                                                                <img src="propic/post-hotel.png"
                                                                                     class="w-100 relative hover-scale-1-1"
                                                                                     alt="">
                                                                             </a>
@@ -125,12 +125,12 @@
                                                                             class="relative hover text-center overflow-hidden soft-shadow">
                                                                             <a class="p-0"
                                                                                 href="Mira-villas.html">
-                                                                                <img src="images/demo/homepage-5.webp"
+                                                                                <img src="propic/mira.png"
                                                                                     class="w-100 relative hover-scale-1-1"
                                                                                     alt="">
                                                                             </a>
                                                                         </div>
-                                                                        <h6 class="mt-3">: Mira Villas </h6>
+                                                                        <h6 class="mt-3">Mira Villas </h6>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -146,7 +146,9 @@
                                 </div>
 
                                 <div class="de-flex-col">
-                                    <a class="btn-main fx-slide w-100" href="#section-contact"><span>Schedule a
+                                    <a class="btn-main fx-slide w-100 whatsappBtn" href="#section-contact"
+                                        id="whatsappBtn1" data-agent="Nardos" data-phone="+971551462613"><span>Schedule
+                                            a
                                             Visit</span></a>
 
                                     <div class="menu_side_area">
@@ -520,7 +522,7 @@
 
 
 
-        <section class="bg-color section-dark text-light pt-50 pb-50">
+         <section id="section-contact" class="bg-color section-dark text-light pt-50 pb-50">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-md-9">
@@ -609,7 +611,7 @@
             </div>
         </div> -->
 
-    <div id="whatsappModal" class="modal5">
+      <div id="whatsappModal" class="modal5">
         <div class="modal5-content">
             <span class="close" id="whatsappClose">&times;</span>
             <!-- ICON -->
@@ -617,8 +619,9 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp icon">
             </div>
             <div class="whatsapp-header">Get a Faster Response</div>
-            <form id="whatsappForm" method="post" action="https://www.indus-inhouse.com/lead-api-v2">
-                <input value="679dd98e4ef30" name="campaign" type="hidden">
+            <form id="whatsappForm" method="post" action="https://www.indus-inhouse.com/lead-api-v3">
+                <input value="6834119c52b0d" name="campaign" type="hidden">
+                <input value="" name="agents_inc" type="hidden">
                 <input value="lp" name="source" type="hidden">
                 <input value="https://dxbmaritimecity.com/thank-you.html" name="return_url" type="hidden">
                 <input type="hidden" name="agent" id="whatsappAgentName">
@@ -629,6 +632,8 @@
                             class="text-black">Buying</label>
                         <input type="radio" id="rent" name="lead_type" value="rent"><label for="rent"
                             class="text-black">Renting</label>
+                        <input type="radio" id="off-plan" name="lead_type" value="off-plan"><label for="off-plan"
+                            class="text-black">Off Plan</label>
                     </div>
                     <div class="text-black">Type</div>
                     <div class="options">
@@ -803,32 +808,28 @@
         let selectedAgent = '';
         let selectedAgentPhone = '';
 
-        const modal = document.getElementById('whatsappModal');
-        const form = document.getElementById('whatsappForm');
-        const closeBtn = document.getElementById('whatsappClose');
-
-
-
-        // Update to handle all WhatsApp buttons and store agent info
+        const whatsappModal = document.getElementById('whatsappModal');
+        const whatsappForm = document.getElementById('whatsappForm');
+        const whatsappCloseBtn = document.getElementById('whatsappClose');
 
         document.querySelectorAll('.whatsappBtn').forEach(btn => {
             btn.onclick = function () {
                 selectedAgent = this.getAttribute('data-agent');
-                selectedAgentPhone = this.getAttribute('data-phone');
+                selectedAgentPhone = this.getAttribute('data-phone'); '';
                 document.getElementById('whatsappAgentName').value = selectedAgent;
-                modal.style.display = 'flex';
+                whatsappModal.style.display = 'flex';
             };
         });
 
-        closeBtn.onclick = () => {
-            modal.style.display = 'none';
+        whatsappCloseBtn.onclick = () => {
+            whatsappModal.style.display = 'none';
         };
         window.onclick = (e) => {
-            if (e.target == modal) {
-                modal.style.display = 'none';
+            if (e.target == whatsappModal) {
+                whatsappModal.style.display = 'none';
             }
         };
-        form.onsubmit = (e) => {
+        whatsappForm.onsubmit = (e) => {
             // Validate fields
             const phone = document.getElementById('phoneNumber').value.trim();
             const userName = document.getElementById('userName').value.trim();
@@ -840,7 +841,7 @@
                 return;
             }
             // Open WhatsApp to selected agent
-            const agentNumber = selectedAgentPhone || '+917338490213'; // fallback to company if not set
+            const agentNumber = selectedAgentPhone || '+971585708097'; // fallback to company if not set
             const message = encodeURIComponent(`My name is ${userName} and I am interested in ${lead_type} ${purpose} properties. Contact me at ${phone}. Please connect me with ${selectedAgent}.`);
             window.open(`https://wa.me/${agentNumber}?text=${message}`, '_blank');
         };
@@ -854,7 +855,7 @@
         let selectedCallPhone = '';
         const callModal = document.getElementById('callModal');
         const callForm = callModal.querySelector('form');
-        const callCloseBtn = callModal.querySelector('.close');
+        const callCloseBtn = document.getElementById('callClose');
 
         document.querySelectorAll('.callBtn').forEach(btn => {
             btn.onclick = function () {
